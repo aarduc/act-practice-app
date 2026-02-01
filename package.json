@@ -2,17 +2,13 @@
   "name": "act-practice-app",
   "version": "1.0.0",
   "private": true,
-  "description": "ACT practice app with user authentication",
-  "main": "server/index.js",
+  "description": "ACT practice app with Express backend and Expo frontend",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "node server/index.js"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "better-sqlite3": "^9.4.3",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2"
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:frontend": "npm --workspace frontend start"
   }
 }
